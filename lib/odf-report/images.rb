@@ -35,7 +35,7 @@ module ODFReport
 
 
     def before_replace_iamges(file)
-      Zip::File.open(file.path) { |zipfile|
+      Zip::ZipFile.open(file.path) { |zipfile|
         doc = manifest_xml_doc(zipfile)
         need_add_nodes = []
         need_add_files(zipfile, file.tmp_dir).each do |image_path|

@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'zip'
+require 'zip/zipfilesystem'
 require 'fileutils'
 require 'nokogiri'
 
